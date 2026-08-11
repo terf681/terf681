@@ -1,0 +1,199 @@
+/* =========================================================
+   HOME PAGE SPECIFIC STYLES
+   ========================================================= */
+
+/* Hero Banner Layout & Overlays */
+.hero {
+    min-height: 760px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 120px 20px 80px;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.95),
+            rgba(0, 0, 0, 0.65),
+            rgba(0, 0, 0, 0.9)
+        ),
+        radial-gradient(
+            circle at 70% 45%,
+            rgba(216, 91, 50, 0.13),
+            transparent 45%
+        );
+    border-bottom: 1px solid var(--border);
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+        linear-gradient(
+            rgba(255, 255, 255, 0.018) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.018) 1px,
+            transparent 1px
+        );
+    background-size: 40px 40px;
+    opacity: 0.35;
+}
+
+.hero-content {
+    position: relative;
+    width: min(var(--max-width), 100%);
+    margin: auto;
+}
+
+.hero-label {
+    margin-bottom: 15px;
+    color: var(--accent);
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 4px;
+}
+
+.hero h1 {
+    margin-bottom: 18px;
+    font-size: clamp(52px, 9vw, 110px);
+    line-height: 0.95;
+    font-weight: 900;
+    letter-spacing: -4px;
+    text-transform: uppercase;
+}
+
+.hero-description {
+    max-width: 520px;
+    margin-bottom: 35px;
+    color: #aaa;
+    font-size: 20px;
+}
+
+/* Server IP Block */
+.server-ip {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    border: 1px solid var(--border);
+    background: rgba(255, 255, 255, 0.025);
+}
+
+.server-ip span {
+    padding: 13px 20px;
+    font-family: monospace;
+    color: #ddd;
+    letter-spacing: 1px;
+}
+
+.server-ip button {
+    height: 100%;
+    padding: 13px 18px;
+    border: none;
+    background: var(--accent);
+    color: #fff;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    transition: 0.25s ease;
+}
+
+.server-ip button:hover {
+    background: var(--accent-dark);
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+/* Server Info Cards (Online / Version / Mode Grid) */
+.server-info {
+    width: min(var(--max-width), calc(100% - 40px));
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-left: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.info-card {
+    min-height: 130px;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-right: 1px solid var(--border);
+}
+
+.info-title {
+    margin-bottom: 6px;
+    color: #666;
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.info-card strong {
+    color: #eee;
+    font-size: 21px;
+}
+
+.info-card .online {
+    color: #62c56c;
+}
+
+/* News Section Cards on Main Page */
+.news-preview {
+    border-bottom: 1px solid var(--border);
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-left: 1px solid var(--border);
+}
+
+.news-card {
+    min-height: 260px;
+    padding: 30px;
+    border-right: 1px solid var(--border);
+    transition: 0.3s ease;
+}
+
+.news-card:hover {
+    background: var(--background-light);
+}
+
+.news-date {
+    margin-bottom: 35px;
+    color: var(--accent);
+    font-family: monospace;
+    font-size: 12px;
+}
+
+.news-card h3 {
+    margin-bottom: 12px;
+    font-size: 19px;
+}
+
+.news-card p {
+    margin-bottom: 25px;
+    color: #777;
+}
+
+.news-card a {
+    color: #aaa;
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.news-card a:hover {
+    color: var(--accent);
+}
